@@ -1,0 +1,25 @@
+[project]
+name = "draftreasoner"
+version = "0.1.0"
+description = "MechAgent — a tool-augmented VLM agent for mechanical drawing understanding."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pillow>=11.0.0",
+    "langchain>=1.2.15",
+    "langchain-openai>=1.1.13",
+    "langgraph>=1.1.6",
+    "rapidocr-onnxruntime>=1.4.4",
+]
+
+[project.scripts]
+draftreasoner = "draftreasoner:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
